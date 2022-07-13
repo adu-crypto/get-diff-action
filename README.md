@@ -217,7 +217,7 @@ If there is no difference in the source code below, this workflow will skip the 
 ### Target events
 | eventName | action |
 |:---|:---|
-| pull_request | opened, reopened, synchronize, closed, ready_for_review |
+| pull_request | opened, reopened, synchronize, closed, ready_for_review, auto_merge_enabled |
 | push | * |
 
 If called on any other event, the result will be empty.
@@ -236,7 +236,7 @@ If called on any other event, the result will be empty.
 ```yaml
 on:
   pull_request:
-    types: [opened, reopened, synchronize, closed, ready_for_review]
+    types: [opened, reopened, synchronize, closed, ready_for_review, auto_merge_enabled]
 
 jobs:
   eslint:
